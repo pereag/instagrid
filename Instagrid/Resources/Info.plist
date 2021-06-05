@@ -48,5 +48,7 @@
 		<string>Delm-Medium.otf</string>
 		<string>ThirstySoftRegular.otf</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>We need the camera permission</string>
 </dict>
 </plist>

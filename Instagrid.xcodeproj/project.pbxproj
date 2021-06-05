@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		D8570DBD263BFE1F00D6DB97 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8570DBC263BFE1F00D6DB97 /* ThirstySoftRegular.otf */; };
 		D8570DBF263BFE2B00D6DB97 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8570DBE263BFE2B00D6DB97 /* Delm-Medium.otf */; };
+		D87FFEBC2645818C00EDB150 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87FFEBB2645818C00EDB150 /* HomeViewController.swift */; };
 		D8A562782632F6B70013DCD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A562772632F6B70013DCD6 /* AppDelegate.swift */; };
 		D8A5627F2632F6B70013DCD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A5627D2632F6B70013DCD6 /* Main.storyboard */; };
 		D8A562812632F6B90013DCD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A562802632F6B90013DCD6 /* Assets.xcassets */; };
 		D8A562842632F6B90013DCD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A562822632F6B90013DCD6 /* LaunchScreen.storyboard */; };
-		D8A562982632FF590013DCD6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A562972632FF590013DCD6 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D8570DBC263BFE1F00D6DB97 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ThirstySoftRegular.otf; path = ../../../../../../../../../Downloads/ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		D8570DBE263BFE2B00D6DB97 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Delm-Medium.otf"; path = "../../../../../../../../../Downloads/Delm-Medium.otf"; sourceTree = "<group>"; };
+		D87FFEBB2645818C00EDB150 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D8A562742632F6B70013DCD6 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A562772632F6B70013DCD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8A5627E2632F6B70013DCD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8A562802632F6B90013DCD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8A562832632F6B90013DCD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8A562852632F6B90013DCD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8A562972632FF590013DCD6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				D8A562772632F6B70013DCD6 /* AppDelegate.swift */,
-				D8A562972632FF590013DCD6 /* HomeViewController.swift */,
+				D87FFEBB2645818C00EDB150 /* HomeViewController.swift */,
 				D8A5627D2632F6B70013DCD6 /* Main.storyboard */,
 			);
 			path = Sources;
@@ -159,7 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8A562782632F6B70013DCD6 /* AppDelegate.swift in Sources */,
-				D8A562982632FF590013DCD6 /* HomeViewController.swift in Sources */,
+				D87FFEBC2645818C00EDB150 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +296,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -315,7 +315,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.valentinperello.Instagrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -333,7 +333,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.valentinperello.Instagrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
