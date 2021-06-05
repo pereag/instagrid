@@ -19,7 +19,10 @@ final class HomeViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet private weak var topRightView: UIView!
     @IBOutlet private weak var bottomLeftView: UIView!
     @IBOutlet private weak var bottomRightView: UIView!
-
+    
+    @IBOutlet private weak var layoutOneButton: UIButton!
+    @IBOutlet private weak var layoutTwoButton: UIButton!
+    @IBOutlet private weak var layoutThreeButton: UIButton!
     // MARK: - Properties
 
     private lazy var imagePicker: UIImagePickerController = {
@@ -42,16 +45,26 @@ final class HomeViewController: UIViewController, UIImagePickerControllerDelegat
     @IBAction private func didPressLayoutOne() {
         bottomRightView.isHidden = false
         topRightView.isHidden = true
+        layoutOneButton.alpha = 0.4
+        layoutTwoButton.alpha = 1
+        layoutThreeButton.alpha = 1
     }
 
     @IBAction private func didPressLayoutTwo() {
         bottomRightView.isHidden = true
         topRightView.isHidden = false
+        layoutOneButton.alpha = 1
+        layoutTwoButton.alpha = 0.4
+        layoutThreeButton.alpha = 1
+        
     }
     
     @IBAction private func didPressLayoutTree() {
         bottomRightView.isHidden = false
         topRightView.isHidden = false
+        layoutOneButton.alpha = 1
+        layoutTwoButton.alpha = 1
+        layoutThreeButton.alpha = 0.4
     }
     
     @IBAction func didPressTopLeftButton() {
@@ -81,7 +94,7 @@ final class HomeViewController: UIViewController, UIImagePickerControllerDelegat
     // MARK: - UIImagePickerControllerDelegate
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        print("Did Cqncel")
+        print("Did Cancel")
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
