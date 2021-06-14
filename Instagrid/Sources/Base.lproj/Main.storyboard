@@ -336,6 +336,8 @@
                                 <exclude reference="hiT-jj-dLl"/>
                                 <exclude reference="ife-hJ-epw"/>
                                 <exclude reference="ndX-1T-8x8"/>
+                                <exclude reference="PXG-fm-ku4"/>
+                                <exclude reference="aOL-X9-1mm"/>
                                 <exclude reference="6Ga-YA-OE1"/>
                                 <exclude reference="GkB-Z7-0n0"/>
                                 <exclude reference="RxQ-Io-aS5"/>
@@ -347,8 +349,6 @@
                                 <exclude reference="3cH-ev-Lnv"/>
                                 <exclude reference="XOO-F1-5Dg"/>
                                 <exclude reference="hRv-fE-uWA"/>
-                                <exclude reference="PXG-fm-ku4"/>
-                                <exclude reference="aOL-X9-1mm"/>
                                 <exclude reference="5hi-cF-X6i"/>
                                 <exclude reference="Qj7-fY-ogt"/>
                             </mask>
@@ -359,6 +359,8 @@
                                 <include reference="hiT-jj-dLl"/>
                                 <exclude reference="ife-hJ-epw"/>
                                 <include reference="ndX-1T-8x8"/>
+                                <include reference="PXG-fm-ku4"/>
+                                <include reference="aOL-X9-1mm"/>
                                 <exclude reference="6Ga-YA-OE1"/>
                                 <include reference="GkB-Z7-0n0"/>
                                 <exclude reference="Ngh-Ow-B4z"/>
@@ -376,8 +378,6 @@
                                 <include reference="hRv-fE-uWA"/>
                                 <exclude reference="lyK-9J-unF"/>
                                 <exclude reference="s6t-E0-ep6"/>
-                                <include reference="PXG-fm-ku4"/>
-                                <include reference="aOL-X9-1mm"/>
                                 <exclude reference="5hi-cF-X6i"/>
                                 <exclude reference="Gwb-1B-vub"/>
                                 <include reference="Qj7-fY-ogt"/>

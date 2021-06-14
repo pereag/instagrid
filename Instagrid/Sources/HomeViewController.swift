@@ -99,7 +99,7 @@ final class HomeViewController: UIViewController, UIImagePickerControllerDelegat
     @IBAction private func gestureReconizerSwipeUp(_ sender: UIPanGestureRecognizer) {
         switch sender.state {
             case .began, .changed:
-                transformPositionGridContainerView(gesture: sender)
+                transformPositionGridContainerView(gesture: sender, screenVerticaly: isVerticaly())
             case .ended, .cancelled:
                 resetPositionGridContainerView()
             default:
@@ -145,19 +145,35 @@ final class HomeViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     // MARK: - Function gridContainerView
-    private func transformPositionGridContainerView(gesture: UIPanGestureRecognizer) {
+    private func transformPositionGridContainerView(gesture: UIPanGestureRecognizer, screenVerticaly: Bool = false) {
         let translation = gesture.translation(in: gridContainerView)
-        var translationYPositon = 0;
-        if translation.y <= 0 {
-            translationYPositon = Int(translation.y)
+        if screenVerticaly {
+            var translationYPositon = 0;
+            if translation.y <= 0 {
+                translationYPositon = Int(translation.y)
+            }
+            gridContainerView.transform = CGAffineTransform(translationX: 0, y: CGFloat(translationYPositon))
+            if translationYPositon <= -80 {
+                print("envoyer photo")
+                let alert = UIAlertController(title: "Alerte", message: "Montage incomplet.", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Fermer", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        } else {
+            var translationXPositon = 0;
+            if translation.x <= 0 {
+                translationXPositon = Int(translation.x)
+            }
+            gridContainerView.transform = CGAffineTransform(translationX: CGFloat(translationXPositon), y:0)
+            if translationXPositon <= -80 {
+                print("envoyer photo")
+                let alert = UIAlertController(title: "Alerte", message: "Montage incomplet.", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Fermer", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+            
         }
-        gridContainerView.transform = CGAffineTransform(translationX: 0, y: CGFloat(translationYPositon))
-        if translationYPositon <= -80 {
-            print("envoyer photo")
-            let alert = UIAlertController(title: "Alerte", message: "Montage incomplet.", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Fermer", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
+        
     }
     
     private func resetPositionGridContainerView(){
@@ -165,22 +181,19 @@ final class HomeViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     // MARK: - Orientation detection
-    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
-        var text=""
+    func isVerticaly() -> Bool {
         switch UIDevice.current.orientation{
         case .portrait:
-            text="Portrait"
+            return true
         case .portraitUpsideDown:
-            text="PortraitUpsideDown"
+            return false
         case .landscapeLeft:
-            text="LandscapeLeft"
+            return false
         case .landscapeRight:
-            text="LandscapeRight"
-            
+            return false
         default:
-            text="Another"
+            return true
         }
-        NSLog("You have moved: \(text)")
     }
 }
 
