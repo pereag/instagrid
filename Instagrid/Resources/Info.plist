@@ -48,7 +48,9 @@
 		<string>Delm-Medium.otf</string>
 		<string>ThirstySoftRegular.otf</string>
 	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>We need the camera permission</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Cette application a besoin de votre permission pour ecrire dans votre bibliothèque photo</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Vous pouvez selectionner des photos a attacher dans des rapports.</string>
 </dict>
 </plist>
