@@ -134,6 +134,8 @@ final class HomeViewController: UIViewController, UIImagePickerControllerDelegat
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[.originalImage] as? UIImage else { return }
         let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         set(imageView, on: currentSelectedSpot)
         buttonDidPressAlpha(btn: currentSelectedButton!)
         picker.dismiss(animated: true, completion: nil)
@@ -169,8 +171,9 @@ final class HomeViewController: UIViewController, UIImagePickerControllerDelegat
                 UIGraphicsEndImageContext()
                 return
             }
+            
             UIGraphicsEndImageContext()
-
+            
             let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
             self.present(activityController, animated: true, completion: nil)
         } else {
